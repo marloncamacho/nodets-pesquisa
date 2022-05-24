@@ -17,7 +17,7 @@ server.use(express.static(path.join(__dirname, '../public')));
 //ROTAS
 server.use(mainRouters);
 server.use((req: Request, res: Response) => {
-    res.send("Página Não Encontrada")
+    res.render("pages/404")
 });
 
 server.listen(process.env.PORT);
